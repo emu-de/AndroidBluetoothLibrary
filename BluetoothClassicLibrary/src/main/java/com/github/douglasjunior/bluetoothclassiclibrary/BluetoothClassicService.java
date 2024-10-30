@@ -336,7 +336,13 @@ public class BluetoothClassicService extends BluetoothService {
                     temp = (byte) read;
 
                     if (temp == byteDelimiter) {
-                        if (i > 0) {
+                        if (mConfig.keepDelimiter) {
+                            buffer[i] = temp;
+                            i++;
+                            dispatchBuffer(buffer, i);
+                            i = 0;
+                        }
+                        else if (i > 0) {
                             dispatchBuffer(buffer, i);
                             i = 0;
                         }

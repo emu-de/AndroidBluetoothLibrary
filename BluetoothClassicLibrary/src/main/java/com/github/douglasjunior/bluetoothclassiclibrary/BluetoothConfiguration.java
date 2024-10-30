@@ -73,7 +73,7 @@ public class BluetoothConfiguration {
      * Option to keep the character delimiter in the data array returned by
      * {@link com.github.douglasjunior.bluetoothclassiclibrary.BluetoothService.OnBluetoothEventCallback#onDataRead(byte[], int)}
      */
-    public char keepDelimiter;
+    public boolean keepDelimiter;
 
     /**
      * Required in {@link BluetoothClassicService}, is the UUID of the device that will connect in serial mode. <br/>
